@@ -8,6 +8,8 @@ export default function Navbar() {
                 <Link href="/" className="font-bold text-3xl">
                     Jaehyeon<span className="text-primary">Paak</span>
                 </Link>
+                <Link href="/posts" className="font-bold">Posts</Link>
+                <Link href="/about" className="font-bold">About</Link>
                 <ModeToggle></ModeToggle>
             </nav>
         </div>
