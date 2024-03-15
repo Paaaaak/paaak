@@ -5,3 +5,9 @@ export interface simpleBlogCard {
     postImage: any;
 }
 
+export interface singlePost {
+    currentSlug: string;
+    title: string;
+    content: any;
+    postImage: any;
+}
