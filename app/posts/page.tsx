@@ -1,30 +1,13 @@
-import { client, urlFor } from "@/app/lib/sanity";
-import { simpleBlogCard } from "../lib/interface";
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
-async function getData() {
-  const query = `
-      * [_type == 'blog'] | order(_createdAt asc) {
-        title,
-        smallDescription,
-        "currentSlug": slug.current,
-        postImage
-      }`;
-
-  const data = await client.fetch(query);
-  return data;
-}
-
 export default async function PostsPage() {
-  const data: simpleBlogCard[] = await getData();
-  console.log(data);
 
   return (
     <div>
-      <div>Check Out All Posts</div>
+      {/* <div>Check Out All Posts</div>
       <div className="grid grid-cols-1 md:grid-cols-2 mt-5 gap-5">
         {data.map((post, idx) => (
           <Card key={idx}>
@@ -46,7 +29,7 @@ export default async function PostsPage() {
             </CardContent>
           </Card>
         ))}
-      </div>
+      </div> */}
     </div>
   );
 }
